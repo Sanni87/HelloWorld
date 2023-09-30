@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://r2sv4a6hkgrq"]
+
+[ext_resource type="Texture2D" uid="uid://b1e0vygt6ur3c" path="res://art/Player.png" id="1_rpy2y"]
+[ext_resource type="Texture2D" uid="uid://chbp4ixvk3eum" path="res://art/PlayerStep.png" id="2_v713h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8v40p"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rpy2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v713h")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8v40p")
+animation = &"walk"
